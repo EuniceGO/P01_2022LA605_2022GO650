@@ -5,8 +5,7 @@ namespace P01_2022LA605_2022GO650.Models
 {
     public class espacioParqueo
     {
-        public class EspacioParqueo
-        {
+       
             [Key]
             public int EspacioId { get; set; }
 
@@ -29,6 +28,6 @@ namespace P01_2022LA605_2022GO650.Models
             // Relación con Sucursal
             [ForeignKey("SucursalId")]
             public Sucursal Sucursal { get; set; }
-        }
+        
     }
 }

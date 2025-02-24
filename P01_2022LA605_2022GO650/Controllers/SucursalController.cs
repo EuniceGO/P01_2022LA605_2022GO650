@@ -20,10 +20,20 @@ namespace P01_2022LA605_2022GO650.Controllers
 
         // GET: api/Sucursales
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Sucursal>>> GetSucursales()
+        
+        public IActionResult Get()
         {
-            return await _context.Sucursales.Include(s => s.Administrador).ToListAsync();
+            List<Sucursal> listadoUsuarios = (from e in _context.Sucursales
+                                                   select e).ToList();
+
+            if (listadoUsuarios.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(listadoUsuarios);
         }
+
 
         // GET: api/Sucursales/5
         [HttpGet("{id}")]
