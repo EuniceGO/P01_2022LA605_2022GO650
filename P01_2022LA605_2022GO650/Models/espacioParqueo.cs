@@ -7,27 +7,26 @@ namespace P01_2022LA605_2022GO650.Models
     {
        
             [Key]
-            public int EspacioId { get; set; }
+            public int espacio_id { get; set; }
 
             [Required]
-            public int SucursalId { get; set; }
+            public int sucursal_id { get; set; }
 
             [Required]
             [MaxLength(10)]
-            public string NumeroEspacio { get; set; }
+            public string numero_espacio { get; set; }
 
             [MaxLength(50)]
-            public string Ubicacion { get; set; }
+            public string ubicacion { get; set; }
 
             [Required]
-            public decimal CostoHora { get; set; }
+            public decimal costo_hora { get; set; }
 
             [Required]
-            public string Estado { get; set; } = "disponible"; // Disponible por defecto
+            public string estado { get; set; } = "disponible"; // Disponible por defecto
 
-            // Relación con Sucursal
-            [ForeignKey("SucursalId")]
-            public Sucursal Sucursal { get; set; }
+            
+          
         
     }
 }
