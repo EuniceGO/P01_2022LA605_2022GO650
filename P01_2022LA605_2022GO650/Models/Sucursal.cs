@@ -24,11 +24,5 @@ namespace P01_2022LA605_2022GO650.Models
 
         public int num_espacios { get; set; }
 
-        // Relación con Usuarios (Administrador)
-       
-       // public usuario Administrador { get; set; } // <--- Renombrado para evitar conflicto
-
-        // Relación con Espacios de Parqueo
-        //public ICollection<espacioParqueo> EspaciosParqueo { get; set; } // <--- Renombrado para evitar conflicto
     }
 }
