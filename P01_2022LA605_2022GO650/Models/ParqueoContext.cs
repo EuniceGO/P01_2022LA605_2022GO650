@@ -7,7 +7,7 @@ namespace P01_2022LA605_2022GO650.Models
     {
         public ParqueoContext(DbContextOptions<ParqueoContext> options) : base(options) { }
 
-        public DbSet<usuario> Usuarios { get; set; }
+        public DbSet<usuario> usuarios { get; set; }
         public DbSet<Sucursal> Sucursales { get; set; }
         public DbSet<espacioParqueo> EspaciosParqueo { get; set; }
         public DbSet<reserva> Reservas { get; set; }
