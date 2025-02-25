@@ -6,7 +6,7 @@ namespace P01_2022LA605_2022GO650.Models
     public class Sucursal
     {
         [Key]
-        public int SucursalId { get; set; }
+        public int sucursal_id { get; set; }
 
         [Required]
         [MaxLength(100)]
@@ -19,18 +19,16 @@ namespace P01_2022LA605_2022GO650.Models
         [MaxLength(20)]
         public string Telefono { get; set; }
 
-        public int? AdministradorId { get; set; } // Puede ser null si aún no tiene admin
+ 
+        public int? administrador_id { get; set; } // Puede ser null si aún no tiene admin
 
-        public int NumEspacios { get; set; }
+        public int num_espacios { get; set; }
 
         // Relación con Usuarios (Administrador)
-        [ForeignKey("AdministradorId")]
-        public usuario Administrador { get; set; }
+       
+       // public usuario Administrador { get; set; } // <--- Renombrado para evitar conflicto
 
         // Relación con Espacios de Parqueo
-        public ICollection<espacioParqueo> EspaciosParqueo { get; set; }
-
-
-
+        //public ICollection<espacioParqueo> EspaciosParqueo { get; set; } // <--- Renombrado para evitar conflicto
     }
 }
